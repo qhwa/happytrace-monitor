@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -38,3 +38,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Mongoid 辅助插件
+gem 'mongoid', '4.0.0'
+gem 'mongoid_auto_increment_id', '0.6.4'
+gem 'mongoid_rails_migrations', '1.0.0'
