@@ -11,7 +11,7 @@ class Tracelog
   has_many :events
   #has_many :alarms
 
-  validates_presence_of :remote_ip, :client_id, :project_id
+  validates_presence_of :remote_ip, :client_id, :project
 
   after_create :create_event, if: -> { raw_json }
 
@@ -24,7 +24,8 @@ class Tracelog
         user:         user,
         client_id:    client_id,
         ip:           remote_ip,
-        tracelog:     self
+        tracelog:     self,
+        project:      project
       )
     end
   end

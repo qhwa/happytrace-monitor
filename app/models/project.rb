@@ -6,4 +6,7 @@ class Project
   field :name, type: String
   field :key,  type: String
 
+  has_many :events
+  has_many :tracelogs
+
 end

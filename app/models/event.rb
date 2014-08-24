@@ -22,5 +22,11 @@ class Event
   belongs_to :project
   #belongs_to :event_group
 
-  validates_presence_of :tracelog, :ip, :client_id, :user_action
+  validates_presence_of :tracelog, :ip, :client_id, :user_action, :project
+
+  after_create :notify
+
+  def notify
+    Thread.new { Pusher.trigger "project_event_created_#{project_id}", 'new_event', count: project.events.count }
+  end
 end
