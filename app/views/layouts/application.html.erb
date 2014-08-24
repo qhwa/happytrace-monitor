@@ -1,14 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>HappytraceMonitor</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
+<!DOCTYPE html><html ng-app="monitor"><head><meta charset="utf-8"><title>Happytrace Monitor</title><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="styles/style.css"></head><body><div class="ui page grid one column"><div class="row"><nav class="ui text menu navbar"><div class="left menu"><a href="#/" class="item">Happytrace Monitor</a><a href="#/" class="item">Dashboard</a><a href="#/alarms" class="item">Alarms</a><a href="#/events" class="item">Events</a></div><div class="right menu"><a href="#" class="item">qhwa</a></div></nav></div><div class="ui divider"></div><div class="column"><div ng-view class="row"></div></div></div><script src="lib/angular/angular.js"></script><script src="lib/angular-route/angular-route.js"></script><script src="lib/moment/moment.js"></script><script src="lib/angular-moment/angular-moment.js"></script><script src="scripts/app.js"></script><script src="scripts/controllers/dashboard.js"></script><script src="scripts/controllers/event-list.js"></script></body></html>
