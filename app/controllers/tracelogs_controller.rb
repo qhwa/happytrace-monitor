@@ -6,9 +6,13 @@ class TracelogsController < ApplicationController
     @tracelog.raw_json = JSON.parse( params[:data] ) if params[:data].present?
 
     if @tracelog.save
-      render json: { success: true }
+      respond_to do |format|
+        format.json { render json: { success: true } }
+      end
     else
-      render json: { success: false, errors: @tracelog.errors }
+      respond_to do |format|
+        format.json { render json: { success: false, errors: @tracelog.errors } }
+      end
     end
   end
 

@@ -42,3 +42,5 @@ gem 'spring',        group: :development
 gem 'mongoid', '4.0.0'
 
 gem 'pusher'
+
+gem 'rack-jsonp-middleware' #jsonp support

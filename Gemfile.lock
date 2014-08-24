@@ -73,6 +73,8 @@ GEM
       multi_json (~> 1.0)
       signature (~> 0.1.6)
     rack (1.5.2)
+    rack-jsonp-middleware (0.0.9)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.5)
@@ -137,6 +139,7 @@ DEPENDENCIES
   jquery-rails
   mongoid (= 4.0.0)
   pusher
+  rack-jsonp-middleware
   rails (= 4.1.5)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
