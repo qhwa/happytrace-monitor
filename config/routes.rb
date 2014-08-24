@@ -8,5 +8,7 @@ Rails.application.routes.draw do
 
   end
 
+  get 'track', to: 'tracelogs#create'
+
 
 end

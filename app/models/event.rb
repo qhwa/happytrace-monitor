@@ -15,9 +15,12 @@ class Event
   field :ip,          type: String
 
   field :tracelog_id, type: Integer
+  field :project_id,  type: Integer
   #field :event_group_id, type: Integer
 
   belongs_to :tracelog
+  belongs_to :project
   #belongs_to :event_group
 
+  validates_presence_of :tracelog, :ip, :client_id, :user_action
 end
